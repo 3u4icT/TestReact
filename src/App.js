@@ -4,6 +4,8 @@ import { Container } from '@mui/material';
 import UserList from './UserList';
 import UserDetail from './UserDetail';
 import CustomHeader from './CustomHeader';
+import ControlledForm from './ControlledForm'
+import Timer from './Timer';
 
 // Sample User Data
 const usersData = [
@@ -16,11 +18,14 @@ function App() {
   const [selectedUser, setSelectedUser] = useState(null);
 
   return (
-    <Container>
-      <CustomHeader title="User Manangement New" />
-      <UserList users={usersData} onSelectUser={setSelectedUser} />
-      <UserDetail user={selectedUser} />
-    </Container>
+      <Container>
+        {/* < ControlledForm></ControlledForm> */}
+        {/* <Timer></Timer> */}
+        <CustomHeader title="User Management New" />
+        <UserList onSelectUser={setSelectedUser} />
+        <UserDetail user={selectedUser} />
+       
+      </Container>
   );
 }
 
